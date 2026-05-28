@@ -38,4 +38,26 @@ inline BiquadCoefficients computePeakCoefficients(double samplingFrequency, doub
     };
 }
 
+struct BiquadFilter {
+    BiquadCoefficients coefficients{};
+    double z1{};
+    double z2{};
+
+    void setCoefficients(const BiquadCoefficients &newCoefficients) {
+        coefficients = newCoefficients;
+    }
+
+    void reset() {
+        z1 = 0.0;
+        z2 = 0.0;
+    }
+
+    double processSample(double x) {
+        const double y{coefficients.b0 * x +z1};
+        z1 = coefficients.b1 * x - coefficients.a1* y + z2;
+        z2 = coefficients.b2 * x - coefficients.a2 * y;
+        return y;
+    }
+};
+
 #endif //BIQUAD_H
