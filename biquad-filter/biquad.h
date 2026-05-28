@@ -34,7 +34,7 @@ inline BiquadCoefficients computePeakCoefficients(double samplingFrequency, doub
         .b1 = (-2.0 * std::cos(w0)) * a0_inv,
         .b2 = (1.0 - (alpha * A)) * a0_inv,
         .a1 = (-2.0 * std::cos(w0)) * a0_inv,
-        .a2 = (1.0 - (alpha * A)) * a0_inv
+        .a2 = (1.0 - (alpha / A)) * a0_inv
     };
 }
 
