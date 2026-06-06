@@ -7,4 +7,5 @@ set(CMAKE_CXX_STANDARD 20)
 
 include_directories(biquad-filter)
 
-add_executable(dsp_learning biquad-filter/main.cpp)
+add_executable(dsp_learning biquad-filter/main.cpp
+        sine-wave-generation/main.cpp)
