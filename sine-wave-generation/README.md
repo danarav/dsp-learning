@@ -13,7 +13,7 @@ The problem is computers can't work with continuous signals. They can only work 
 ### Sampling — Turning Continuous into Discrete
 **Sampling** is the process of measuring the amplitude of a signal at regular intervals and storing each measurement as a number.
 Each individual measurement is called a sample.
-The rate at which we take these measurements is called the sample rate — measured in Hz (**samples per second**).
+The rate at which we take these measurements is called the **sample rate** — measured in Hz (**samples per second**).
 
 The most common sample rate you'll encounter is **44,100 Hz** — meaning we take 44,100 snapshots of the audio signal every single second. This is the standard for CDs and most audio software including JUCE.
 
